@@ -9,7 +9,8 @@ export default class QuoteBox extends Component {
       author: ''
     }
 
-    this.getNewQuote();
+    //set app state with random values
+    this.handleClick();
 
     this.getNewQuote = this.getNewQuote.bind(this);
     this.changeColorTheme = this.changeColorTheme.bind(this);
