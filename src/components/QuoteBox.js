@@ -28,8 +28,9 @@ export default class QuoteBox extends Component {
       <div id="quote-box">
         <p id="text" className="center-text">{this.state.quote}</p>
         <p id="author" className="center-text">-{this.state.author}</p>
-        <div>
-          <button id="new-quote" onClick={this.getNewQuote}>New Quote</button>
+        <div id="quote-box-btns">
+          <button id="tweet-quote" class="btn"><i class="fab fa-twitter"></i></button>
+          <button id="new-quote" class="btn" onClick={this.getNewQuote}>New Quote</button>
         </div>
       </div>
     );

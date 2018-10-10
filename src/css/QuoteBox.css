@@ -16,10 +16,22 @@
   font: 5em 'PT Sans', sans-serif;
 }
 
+#quote-box-btns {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
 #author {
-  font-style: italic;
+  margin-left: auto;
 }
 
 #new-quote {
+  text-align: right;
+}
+
+.btn {
   border-radius: 5px;
+  padding: 10px;
 }
