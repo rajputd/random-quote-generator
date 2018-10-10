@@ -4,6 +4,7 @@
   "description": "A front-end app that generates random quotes",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --mode development",
     "test": "test"
   },
   "author": "Dileep Rajput",
