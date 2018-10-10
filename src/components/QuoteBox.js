@@ -8,12 +8,12 @@ export default class QuoteBox extends Component {
       author: ''
     }
 
-    this.getRandomQuote();
+    this.getNewQuote();
 
-    this.getRandomQuote = this.getRandomQuote.bind(this);
+    this.getNewQuote = this.getNewQuote.bind(this);
   }
 
-  getRandomQuote() {
+  getNewQuote() {
     const url = "https://talaikis.com/api/quotes/random/";
     fetch(url)
       .then((response) => { return response.json(); })
@@ -27,7 +27,7 @@ export default class QuoteBox extends Component {
       <div>
         <p>{this.state.quote}</p>
         <p>{this.state.author}</p>
-        <button onClick={this.getRandomQuote}>New Quote</button>
+        <button onClick={this.getNewQuote}>New Quote</button>
       </div>
     );
   }
