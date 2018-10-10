@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../css/QuoteBox.css';
 
 export default class QuoteBox extends Component {
   constructor(props) {
@@ -24,10 +25,12 @@ export default class QuoteBox extends Component {
 
   render(){
     return(
-      <div>
-        <p>{this.state.quote}</p>
-        <p>{this.state.author}</p>
-        <button onClick={this.getNewQuote}>New Quote</button>
+      <div id="quote-box">
+        <p id="text" className="center-text">{this.state.quote}</p>
+        <p id="author" className="center-text">-{this.state.author}</p>
+        <div>
+          <button id="new-quote" onClick={this.getNewQuote}>New Quote</button>
+        </div>
       </div>
     );
   }

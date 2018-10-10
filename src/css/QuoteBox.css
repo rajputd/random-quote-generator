@@ -1,0 +1,25 @@
+#quote-box {
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.center-text {
+  text-align: center;
+}
+
+#text:before {
+  content: '\201C';
+  font: 5em 'PT Sans', sans-serif;
+}
+
+#author {
+  font-style: italic;
+}
+
+#new-quote {
+  border-radius: 5px;
+}
