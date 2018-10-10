@@ -12,6 +12,8 @@ export default class QuoteBox extends Component {
     this.getNewQuote();
 
     this.getNewQuote = this.getNewQuote.bind(this);
+    this.changeColorTheme = this.changeColorTheme.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   getNewQuote() {
@@ -23,14 +25,36 @@ export default class QuoteBox extends Component {
       });
   }
 
+  changeColorTheme() {
+    const colors = ["Blue", "BlueViolet", "Chocolate", "Crimson", "DarkGolderRod",
+                    "DarkGreen", "DarkOrchid", "DeepPink", "Fuchsia",
+                    "OrangeRed", "Olive"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    document.body.style.backgroundColor = randomColor;
+    document.body.style.color = randomColor;
+  }
+
+  handleClick() {
+    this.getNewQuote();
+    this.changeColorTheme();
+  }
+
   render(){
+    let tweetLink = "https://twitter.com/intent/tweet?hastags=quotes&related=freecodecamp&text=" + encodeURI(this.state.quote + " -" + this.state.author);
     return(
       <div id="quote-box">
         <p id="text" className="center-text">{this.state.quote}</p>
         <p id="author" className="center-text">-{this.state.author}</p>
         <div id="quote-box-btns">
-          <button id="tweet-quote" class="btn"><i class="fab fa-twitter"></i></button>
-          <button id="new-quote" class="btn" onClick={this.getNewQuote}>New Quote</button>
+          <div id="tweet-quote">
+            <a href={tweetLink} target="_blank">
+              <button className="btn">
+                <i className="fab fa-twitter"></i>
+              </button>
+            </a>
+          </div>
+          <button id="new-quote" className="btn" onClick={this.handleClick}>New Quote</button>
         </div>
       </div>
     );

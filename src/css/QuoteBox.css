@@ -1,19 +1,29 @@
+body {
+  transition: background-color 2s, color 2s;
+  -webkit-transition: background-color 2s, color 2s;
+}
+
 #quote-box {
-  border: 1px solid black;
   padding: 10px;
   margin: auto;
   justify-content: center;
   border-radius: 10px;
   background-color: white;
+  color: inherit;
+
 }
 
 .center-text {
   text-align: center;
 }
 
+
 #text:before {
   content: '\201C';
-  font: 5em 'PT Sans', sans-serif;
+  font: 4em 'PT Sans', sans-serif;
+  line-height: 0.1em;
+  margin-right: .1em;
+  vertical-align: -.5em;
 }
 
 #quote-box-btns {
@@ -31,7 +41,12 @@
   text-align: right;
 }
 
+#tweet-quote a {
+  color: inherit;
+}
+
 .btn {
   border-radius: 5px;
   padding: 10px;
+  color: inherit;
 }
